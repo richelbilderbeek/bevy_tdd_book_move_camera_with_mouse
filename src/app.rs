@@ -202,7 +202,7 @@ mod tests {
     }
 
     #[test]
-    fn test_camera_responds_to_mouse_button_press() {
+    fn test_camera_responds_to_left_mouse_button_press() {
         let mut app = create_app();
         assert!(app.is_plugin_added::<bevy::input::InputPlugin>());
         app.update();
@@ -214,6 +214,26 @@ mod tests {
         app.world_mut()
             .resource_mut::<ButtonInput<MouseButton>>()
             .press(MouseButton::Left);
+
+        app.update();
+
+        // Position must have changed now
+        assert_ne!(get_camera_rotation(&mut app), 0.0);
+    }
+
+    #[test]
+    fn test_camera_responds_to_right_mouse_button_press() {
+        let mut app = create_app();
+        assert!(app.is_plugin_added::<bevy::input::InputPlugin>());
+        app.update();
+
+        // Not moved yet
+        assert_eq!(get_camera_rotation(&mut app), 0.0);
+
+        // Press the left mouse button
+        app.world_mut()
+            .resource_mut::<ButtonInput<MouseButton>>()
+            .press(MouseButton::Right);
 
         app.update();
 
