@@ -1,4 +1,4 @@
-# bevy_tdd_book_move_camera_with_mouse
+[# bevy_tdd_book_move_camera_with_mouse
 
 [![Check build](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_build.yaml/badge.svg?branch=master)](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_build.yaml)
 [![Check links](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_links.yaml/badge.svg?branch=master)](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_links.yaml)
@@ -10,7 +10,11 @@
 
 Chapter of [https://github.com/richelbilderbeek/bevy_tdd_book](https://github.com/richelbilderbeek/bevy_tdd_book)
 
-First, we follow the steps of the [Bevy setup](https://bevyengine.org/learn/quick-start/getting-started/setup/):
+![Screenshot of this application](move_camera_with_mouse.png)
+
+## Setup
+
+Setup is done as described in [the Bevy 'getting started' guide](https://bevyengine.org/learn/quick-start/getting-started/setup/):
 
 ```bash
 git clone https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse
@@ -52,3 +56,4 @@ Filename                                  |Descriptions
 ## References
 
 * [Bevy setup](https://bevyengine.org/learn/quick-start/getting-started/setup/)
+]()
