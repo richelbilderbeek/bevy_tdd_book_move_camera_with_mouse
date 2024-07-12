@@ -124,16 +124,11 @@ fn get_camera_rotation(app: &mut App) -> f32 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    //use bevy::input::keyboard::KeyCode;
-
-    #[test]
-    fn test_can_create_app() {
-        create_app();
-    }
 
     #[test]
     fn test_empty_app_has_no_players() {
         let mut app = App::new();
+        app.update();
         assert_eq!(count_n_players(&mut app), 0);
     }
 

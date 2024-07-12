@@ -1,4 +1,4 @@
-[# bevy_tdd_book_move_camera_with_mouse
+# bevy_tdd_book_move_camera_with_mouse
 
 [![Check build](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_build.yaml/badge.svg?branch=master)](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_build.yaml)
 [![Check links](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_links.yaml/badge.svg?branch=master)](https://github.com/richelbilderbeek/bevy_tdd_book_move_camera_with_mouse/actions/workflows/check_links.yaml)
