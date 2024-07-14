@@ -71,7 +71,7 @@ fn respond_to_mouse_wheel_turn(
     for event in mouse_wheel_event.read() {
         let mut projection = query.single_mut();
         // Do something
-        projection.size *= 1.0 + ((event.x + event.y) / 10.0);
+        projection.scale *= 1.0 + ((event.x + event.y) / 10.0);
     }
 }
 
@@ -105,7 +105,7 @@ fn get_player_position(app: &mut App) -> Vec2 {
 fn get_camera_scale(app: &mut App) -> f32 {
     let mut query = app.world_mut().query::<(&OrthographicProjection, &Camera)>();
     let (projection, _) = query.single(app.world());
-    projection.size
+    projection.scale
 }
 #[cfg(test)]
 fn get_player_size(app: &mut App) -> Vec2 {
