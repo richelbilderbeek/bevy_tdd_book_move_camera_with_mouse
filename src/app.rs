@@ -14,7 +14,14 @@ pub fn create_app() -> App {
     }
 
     app.add_systems(Startup, (add_camera, add_player));
-    app.add_systems(Update, (respond_to_mouse_button_press, respond_to_mouse_move, respond_to_mouse_wheel_turn));
+    app.add_systems(
+        Update,
+        (
+            respond_to_mouse_button_press,
+            respond_to_mouse_move,
+            respond_to_mouse_wheel_turn,
+        ),
+    );
 
     // Do not do update, as this will disallow to do more steps
     // app.update(); //Don't!
@@ -22,9 +29,7 @@ pub fn create_app() -> App {
 }
 
 fn add_camera(mut commands: Commands) {
-    commands.spawn(
-        Camera2dBundle::default()
-    );
+    commands.spawn(Camera2dBundle::default());
 }
 
 fn add_player(mut commands: Commands) {
@@ -103,7 +108,9 @@ fn get_player_position(app: &mut App) -> Vec2 {
 
 #[cfg(test)]
 fn get_camera_scale(app: &mut App) -> f32 {
-    let mut query = app.world_mut().query::<(&OrthographicProjection, &Camera)>();
+    let mut query = app
+        .world_mut()
+        .query::<(&OrthographicProjection, &Camera)>();
     let (projection, _) = query.single(app.world());
     projection.scale
 }
