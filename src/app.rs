@@ -39,7 +39,7 @@ fn add_camera(mut commands: Commands) {
 
 fn add_player(mut commands: Commands) {
     commands.spawn((
-        SpriteBundle {
+        Sprite {
             transform: Transform {
                 scale: Vec3::new(64.0, 32.0, 0.0),
                 ..default()
